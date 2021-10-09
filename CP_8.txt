@@ -1,0 +1,26 @@
+# python CP_8.txt
+
+def vosmerich(n):
+	a = ''
+	while n > 0:
+		a = str(n%8) + a
+		n //= 8
+	return(a)
+
+def dvoich(n):
+	b = ''
+	while n > 0:
+		b = str(n%2) + b
+		n = n // 2
+	return(b)
+
+print("Введите число для перевода")
+n = int(input())
+print("напишите 2, если необходимо перевести в двоичную систему и 8 - если в восьмеричную")
+ss=int(input())
+if ss==2:
+	print(dvoich(n))
+else: 
+	if ss==8:
+		print(vosmerich(n))
+	else: print("Введено неверное значение")
